@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johanna</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Joha</title>
 </head>
-<body>
-    <h1>CineFilms</h1>
+<body class="bg-gray-100">
+
+    <!-- Encabezado -->
+<header class="bg-gray-800 text-white p-4">
+    <div class="flex items-center justify-between">
+        <h3 class="font-bold">CineFilms</h3>
+        
+        <div class="flex items-center space-x-6">
+            <!-- Botón de dato interesante -->
+            <button id="interestingFactButton" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-400 mx-20">
+                Mostrar dato interesante
+            </button>
+
+            <input type="text" placeholder="Buscar" class="bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-80">
+            <button type="button" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-400">Aquí</button>
+            <ion-icon name="person-circle-outline" style="font-size:37px"></ion-icon>
+        </div>
+    </div>
+</header>
+
+        <!-- Espacio principal que incluye el menú lateral y el contenido -->
+    <div class="flex h-screen">
+        
+        <!-- Menú lateral -->
+        <nav class="bg-gray-800 w-64 min-h-screen flex flex-col">
+            <div class="p-4">
+                <h1 class="text-white text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">Menú</h1>
+            </div>
+            <ul class="flex-1 px-4 space-y-4 mt-4">
+                <li>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md" >Perfil</a>
+                
+                </li>
+                <li>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">Videos</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">Grabar</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md">Usuarios</a>
+                </li>
+            </ul>
+            <div class="p-4">
+                <a href="#" class="text-gray-400 hover:text-white ">Cerrar sesión</a>
+            </div>
+        </nav>
+
+        <!-- Sección de imagen grande -->
+        <div class="flex flex-col items-center w-full pt-4 px-4">
+            <img src="img_base.png" alt="Imagen Grande" class="w-full h-64 object-cover rounded-lg mb-4">
+            
+        
+        <!-- Sección de imágenes pequeñas -->
+        <div class="flex justify-center space-x-4">
+            <div class="flex flex-col items-center">
+                <img src="Occupied.jpg" alt="Imagen 1" class="w-40 h-40 object-cover rounded-lg">
+                <p class="mt-2 text-center text-gray-700 font-bold">Terror</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="Bailarina.jpg" alt="Imagen 2" class="w-40 h-40 object-cover rounded-lg">
+                <p class="mt-2 text-center text-gray-700 font-bold">Reflexión</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="Luna.jpg" alt="Imagen 3" class="w-40 h-40 object-cover rounded-lg">
+                <p class="mt-2 text-center text-gray-700 font-bold">Diversión</p>
+            </div>
+        </div>
+    </div>
+
+
+        
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
