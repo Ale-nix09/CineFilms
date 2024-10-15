@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-800">
+
+   <!-- Encabezado -->
+    <header class="bg-gray-800 p-4 shadow-md">
+       <div class="flex items-center justify-between">
+           <!-- Botón de regreso -->
+           <div>
+               <a href="index.html" class="text-gray-700 hover:text-gray-500 bg-slate-300 px-4 py-2 rounded-md font-semibold shadow-md">Regresar</a>
+           </div>
+
+           <div class="font-bold text-white">
+            <h1>CineFilms</h1>
+           </div>
+   
+           <!-- Área de búsqueda -->
+           <div class="flex items-center space-x-4">
+               <input type="text" id="searchInput" placeholder="Buscar" class="bg-gray-700 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-80" oninput="filterProducts()">
+           </div>
+       </div>
+   </header>
+   
+
+ <!-- Secciones de Cortos -->
+<ul id="productList" class="grid grid-cols-4 gap-4 mt-6 ml-4">
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Luna.jpg" alt="La Luna" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">La Luna</h2>
+        <span class="text-slate-600 font-serif">Familia</span>
+        <a href="https://www.youtube.com/watch?v=7UMecxjQAvk" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Reflexión.jpg" alt="Reflexión" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">The Present</h2>
+        <span class="text-gray-600 font-serif">Reflexión</span>
+        <a href="https://www.youtube.com/watch?v=3XA0bB79oGc" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Fantasía.jpg" alt="Fantasía" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Partly Cloudy</h2>
+        <span class="text-gray-600 font-serif">Fantasía</span>
+        <a href="https://www.youtube.com/watch?v=Hb7yykqb85U" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Day & Night.jpg" alt="Day & Night" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Day & Night</h2>
+        <span class="text-gray-600 font-serif">Diversión</span>
+        <a href="https://www.youtube.com/watch?v=dJz_noKP-Bw" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/presto.jpg" alt="Presto" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Presto</h2>
+        <span class="text-gray-600 font-serif">Magia</span>
+        <a href="https://www.youtube.com/watch?v=5Wa4gLSn8Hc" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Bao.webp" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Bao</h2>
+        <span class="text-gray-600 font-serif">Nostalgia</span>
+        <a href="https://www.youtube.com/watch?v=f5CcgFTO274" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Piper.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Piper</h2>
+        <span class="text-gray-600 font-serif">Motivacional</span>
+        <a href="https://www.youtube.com/watch?v=WIPV1iwzrzg&t=119s" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/For The Birds.webp" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">For the Birds</h2>
+        <span class="text-gray-600 font-serif">Fantasía</span>
+        <a href="https://www.youtube.com/watch?v=nYTrIcn4rjg" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/One Man Band.jpeg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">One Man Band</h2>
+        <span class="text-gray-600 font-serif">Música</span>
+        <a href="https://www.youtube.com/watch?v=454nNoD6-TI" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/The Blue Umbrella.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">The Blue Umbrella</h2>
+        <span class="text-gray-600 font-serif">Romance</span>
+        <a href="https://www.youtube.com/watch?v=t5aziLb8IrI" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Lifted.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Lifted</h2>
+        <span class="text-gray-600 font-serif">Humor</span>
+        <a href="https://www.youtube.com/watch?v=LVLoc6FrLi0" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Lava.webp" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Lava</h2>
+        <span class="text-gray-600 font-serif">Romance</span>
+        <a href="https://www.youtube.com/watch?v=2TVuhNCoOAs" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Your Friend the Rat.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Your Friend the Rat</h2>
+        <span class="text-gray-600 font-serif">Informativo</span>
+        <a href="https://www.youtube.com/watch?v=IofE7IyvLE0" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Había una vez…un Pescador, un Perro y un Pájaro.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Había una vez...</h2>
+        <span class="text-gray-600 font-serif">Reflexión</span>
+        <a href="https://www.youtube.com/watch?v=5edfzhwdzUk&t=13s" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Occupied.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Occupied</h2>
+        <span class="text-gray-600 font-serif">Terror</span>
+        <a href="https://www.youtube.com/watch?v=AldqlGq0B9w" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Burn-E.webp" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Burn-E</h2>
+        <span class="text-gray-600 font-serif">Humor</span>
+        <a href="https://www.youtube.com/watch?v=avQQZTfUbpc" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Bailarina.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Tamara</h2>
+        <span class="text-gray-600 font-serif">Reflexión</span>
+        <a href="https://www.youtube.com/watch?v=foRUY2l4-3I" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Geri’s Game.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Geri´s Game</h2>
+        <span class="text-gray-600 font-serif">Reflexión</span>
+        <a href="https://www.youtube.com/watch?v=gA0CDjblnWQ" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Habiaunavezunestudio.webp" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Había una vez un estudio</h2>
+        <span class="text-gray-600 font-serif">Nostalgia</span>
+        <a href="https://www.youtube.com/watch?v=gB90me0aqSY&t=13s" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    <li class="bg-slate-300 w-48 h-auto p-4 rounded-lg shadow-lg flex flex-col items-center hover:bg-slate-100 product-item">
+        <img src="Imagenes/Cuerdas.jpg" alt="Bao" class="w-40 h-40 object-cover rounded-lg mb-3">
+        <h2 class="text-xl font-bold text-gray-800 font-serif">Cuerdas</h2>
+        <span class="text-gray-600 font-serif">Reflexión</span>
+        <a href="https://www.youtube.com/watch?v=4INwx_tmTKw" class="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-500 transition-all duration-200 ease-in-out shadow-md hover:shadow-lg">Ver</a>
+    </li>
+
+    
+
+
+
+</ul>
+
+    <script src="main.js"></script>
+</body>
+</html>
